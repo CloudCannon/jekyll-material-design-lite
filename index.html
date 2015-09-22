@@ -1,0 +1,19 @@
+---
+layout: default
+title: Home
+---
+
+{% for post in site.posts %}
+  <div class="mdl-card mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url('{{ post.header_image_url }}')">
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    </div>
+    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+      <div class="minilogo"></div>
+      <div>
+        <strong>{{ post.author }}</strong>
+        <span>{{ post.date | date: "%-d %B %Y" }}</span>
+      </div>
+    </div>
+  </div>
+{% endfor %}

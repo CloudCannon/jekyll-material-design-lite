@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url('{{ page.header_image_url }}')">
+    <h3>{{ page.title }}</h3>
+  </div>
+  <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    <div class="minilogo"></div>
+    <div>
+      <strong>{{ page.author }}</strong>
+      <span>{{ page.date | date: "%-d %B %Y" }}</span>
+    </div>
+    <div class="section-spacer"></div>
+    <div class="meta__favorites">
+      425 <i class="material-icons" role="presentation">favorite</i>
+      <span class="visuallyhidden">favorites</span>
+    </div>
+    <div>
+      <i class="material-icons" role="presentation">bookmark</i>
+      <span class="visuallyhidden">bookmark</span>
+    </div>
+    <div>
+      <i class="material-icons" role="presentation">share</i>
+      <span class="visuallyhidden">share</span>
+    </div>
+  </div>
+  <div class="mdl-color-text--grey-700 formatted-text mdl-card__supporting-text">
+    {{ content }}
+  </div>
+</div>
